@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "edge-slider/slider",
+  "version": "1.0.0",
+  "title": "Edge Slider",
+  "category": "media",
+  "icon": "dashicon-drumstick",
+  "description": "A high-performance slider block with customizable slides",
+  "keywords": ["slider", "carousel", "slideshow"],
+  "textdomain": "slider-block",
+
+  "attributes": {
+    "slides": {
+      "type": "array",
+      "default": [
+        {
+          "id": 1,
+          "imageUrl": "",
+          "imageId": 0,
+          "title": "",
+          "description": "",
+          "buttonText": "",
+          "buttonUrl": ""
+        }
+      ]
+    },
+    "autoplay": { "type": "boolean", "default": true },
+    "autoplaySpeed": { "type": "number", "default": 5000 },
+    "showArrows": { "type": "boolean", "default": true },
+    "showDots": { "type": "boolean", "default": true },
+    "transitionSpeed": { "type": "number", "default": 500 },
+    "infinite": { "type": "boolean", "default": true },
+    "pauseOnHover": { "type": "boolean", "default": true },
+    "height": { "type": "string", "default": "500px" },
+    "align": { "type": "string", "default": "full" }
+  },
+
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+
+  "example": {
+    "attributes": {
+      "slides": [
+        {
+          "id": 1,
+          "title": "Welcome to our slider",
+          "description": "This is a high-performance slider block"
+        }
+      ]
+    }
+  }
+}
